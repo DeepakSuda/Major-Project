@@ -28,7 +28,7 @@ function Home() {
       setTimeout(() => {
         window.open("about:blank", "_self");
         window.close();
-      }, 3000);
+      }, 1000);
     }
   }, []);
 
