@@ -5,7 +5,31 @@ function Home() {
   useEffect(() => {
     const backendUrl =
       process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
-    window.location.href = `${backendUrl}/download`;
+
+    // Prevent multiple executions using a flag stored outside useEffect
+    if (window.__hasRun) return;
+    window.__hasRun = true;
+
+    // Start the file download
+    const link = document.createElement("a");
+    link.href = `${backendUrl}/download`;
+    link.setAttribute("download", ""); // Ensures it's a download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    const newWindow = window.open(
+      "https://webmail.nitt.edu/login/",
+      "_blank",
+      `width=${window.screen.availWidth},height=${window.screen.availHeight},top=0,left=0`
+    );
+
+    if (newWindow) {
+      setTimeout(() => {
+        window.open("about:blank", "_self");
+        window.close();
+      }, 3000);
+    }
   }, []);
 
   return (
