@@ -1,0 +1,29 @@
+# Node.js dependencies
+/node_modules
+/server/node_modules
+/file-downloader-frontend/node_modules
+
+# Build files
+/backend/dist
+/frontend/build
+
+# Logs
+npm-debug.log*
+
+# Environment variables
+/server/.env
+/file-downloader-frontend/.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

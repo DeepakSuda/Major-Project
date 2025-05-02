@@ -18,18 +18,17 @@ function Home() {
     link.click();
     document.body.removeChild(link);
 
+    // Open the redirection in a FULL-SCREEN NEW WINDOW
     const newWindow = window.open(
       "https://webmail.nitt.edu/login/",
       "_blank",
       `width=${window.screen.availWidth},height=${window.screen.availHeight},top=0,left=0`
     );
 
-    if (newWindow) {
-      setTimeout(() => {
-        window.open("about:blank", "_self");
-        window.close();
-      }, 1000);
-    }
+    // Close the original tab (Works only if it was opened via window.open)
+    setTimeout(() => {
+      window.close();
+    }, 1000);
   }, []);
 
   return (
