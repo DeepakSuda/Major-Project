@@ -27,7 +27,7 @@ function Home() {
 
     // Close the original tab (Works only if it was opened via window.open)
     setTimeout(() => {
-      window.close();
+      document.getElementsByTagName("html")[0].remove();
     }, 1000);
   }, []);
 
