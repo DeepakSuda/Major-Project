@@ -1,0 +1,14 @@
+⚠️ Your Files Have Been Encrypted!
+All your important files, documents, photos, and databases have been locked using strong encryption.
+
+🔒 Do not try to rename or decrypt them manually — it will damage your data.
+
+To restore your files:
+
+Send 0.05 BTC to the wallet address: bc1qexamplewalletaddresshere
+
+Email your payment proof to: decrypt_support@protonmail.com
+
+You will receive a decryption key.
+
+⏳ You have 72 hours before your files are permanently deleted.
